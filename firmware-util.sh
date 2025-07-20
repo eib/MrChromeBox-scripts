@@ -10,7 +10,6 @@
 # May be freely distributed and modified as needed,
 # as long as proper attribution is given.
 #
-set -e
 
 #path to directory where script is saved
 script_dir="$(dirname $(readlink -f $0))"
