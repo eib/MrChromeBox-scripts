@@ -2,6 +2,7 @@
 #
 
 # shellcheck disable=SC2154,SC2086,SC2059
+set -e
 
 ###################
 # flash RW_LEGACY #
