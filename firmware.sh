@@ -876,9 +876,9 @@ USB/SD devices are connected. "
 
     usb_device="${usb_devs[${usb_dev_index}-1]}"
     echo "Backing up firmware to: $usb_device"
-    mkdir /tmp/usb
-    if ! mount -o rw "${usb_device}" /tmp/usb; then
-        if ! mount -o rw "${usb_device}1" /tmp/usb; then
+    mkdir /tmp/usb > /dev/null 2>&1
+    if ! mount -o rw "${usb_device}" /tmp/usb > /dev/null 2>&1; then
+        if ! mount -o rw "${usb_device}1" /tmp/usb > /dev/null 2>&1; then
             backup_fail "USB backup device failed to mount; cannot proceed. Ensure your USB is FAT32-formatted and try again."
             return 1
         fi
